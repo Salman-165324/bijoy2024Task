@@ -81,7 +81,7 @@ export default function SignupForm() {
                 key={fields.email.key}
                 name={fields.email.name}
                 defaultValue={fields.email.initialValue}
-                 autoComplete="email"
+                autoComplete="email"
               />
               <div>{fields.email.errors}</div>
             </div>
@@ -94,11 +94,23 @@ export default function SignupForm() {
                 key={fields.password.key}
                 name={fields.password.name}
                 defaultValue={fields.password.initialValue}
-                 autoComplete="new-password"
+                autoComplete="new-password"
               />
               <div>{fields.password.errors}</div>
             </div>
 
+            <div className="grid gap-2">
+              <Label htmlFor="confirm-password">Confirm Password</Label>
+              <Input
+                id="confirm-password"
+                type="password"
+                key={fields.confirmPassword.key}
+                name={fields.confirmPassword.name}
+                defaultValue={fields.confirmPassword.initialValue}
+                
+              />
+              <div>{fields.confirmPassword.errors}</div>
+            </div>
             <Button type="submit" className="w-full">
               Create an account
             </Button>
