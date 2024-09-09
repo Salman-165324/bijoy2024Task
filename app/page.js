@@ -1,9 +1,9 @@
-import LoginForm from "@/components/LoginForm";
+import SignupForm from "@/components/SignupForm";
 
 export default function Home() {
   return (
-    <main className="w-screen h-screen">
-      <LoginForm></LoginForm>
-    </main>
+    <main>
+      <SignupForm></SignupForm>
+      </main>
   );
 }
