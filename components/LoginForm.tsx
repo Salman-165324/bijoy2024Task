@@ -9,6 +9,7 @@ import {
 import React from "react";
 import { Button } from "./ui/button";
 import { FaGoogle } from "react-icons/fa6";
+import { doGoogleSign } from "@/lib/actions/authentication";
 
 
 const LoginForm = () => {
@@ -22,10 +23,10 @@ const LoginForm = () => {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <form className="grid  gap-4">
+          <form action={doGoogleSign} className="grid  gap-4">
          
 
-            <Button type="submit" className="w-full">
+            <Button type="submit" name="action" value="google" className="w-full">
               <FaGoogle className = "mr-3 h-4 w-4"/> Login With Google
             </Button>
           </form>
